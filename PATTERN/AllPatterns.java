@@ -15,9 +15,12 @@ public class AllPatterns {
             for (int j = 1; j <= size + i - 1; j++) {
                 if (j <= size - i) {
                     System.out.print(" ");
-                } else {
-                    System.out.print("*");
+                }else if ((j - (size - i)) % 2 == 1) {
+                    System.out.print("* ");
                 }
+                // }else {
+                //     System.out.print(" ");
+                // }
             }
             System.out.println();
         }
@@ -37,9 +40,12 @@ public class AllPatterns {
             for (int j = 1; j <= size + i - 1; j++) {
                 if (j <= size - i) {
                     System.out.print(" ");
-                } else {
-                    System.out.print("*");
+                } else if ((j - (size - i)) % 2 == 1) {
+                    System.out.print("* ");
                 }
+                // }else {
+                //     System.out.print(" ");
+                // }
             }
             System.out.println();
         }

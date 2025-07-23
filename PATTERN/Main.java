@@ -10,13 +10,13 @@ public class Main {
         System.out.println("enter any pattern(squre,rectrangle,triangle,inverted triangle,hourglass):");
         String pattern = sc.nextLine().toLowerCase();
         int size;
-        AllPatterns PATTERN = new AllPatterns();
+        AllPatterns Pattern = new AllPatterns();
         switch (pattern) {
             case "square":
                 System.out.println("enter size:");
                 size = sc.nextInt();
                 sc.nextLine(); // consume leftover newline
-                PATTERN.Square(size);
+                Pattern.Square(size);
                 break;
             case "rectangle":
                 System.out.println("enter height:");
@@ -24,25 +24,25 @@ public class Main {
                 System.out.println("enter width:");
                 int width = sc.nextInt();
                 sc.nextLine(); // consume leftover newline
-                PATTERN.Rectangle(height,width);
+                Pattern.Rectangle(height,width);
                 break;
             case "triangle":
                 System.out.println("enter size:");
                 size = sc.nextInt();
                 sc.nextLine(); // consume leftover newline
-                PATTERN.Triangle(size,0);
+                Pattern.Triangle(size,0);
                 break;
             case "inverted triangle":
                 System.out.println("enter size:");
                 size = sc.nextInt();
                 sc.nextLine(); // consume leftover newline
-                PATTERN.InvertedTriangle(size);
+                Pattern.InvertedTriangle(size);
                 break;
             case "hourglass":
                 System.out.println("enter size:");
                 size = sc.nextInt();
                 sc.nextLine(); // consume leftover newline
-                PATTERN.Hourglass(size);
+                Pattern.Hourglass(size);
                 break;
             default:
                 System.err.println("shape not available or spelling is incorrect.");
