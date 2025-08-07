@@ -1,17 +1,14 @@
-package Alphabet;
+package Word;
 
-public class AllAlphabets {
+public class Alphabets {
     public void A(int size) {
-        int width = size * 2 - 1;
-        int mid = size / 2 + 1; // middle row for crossbar
-
         for (int i = 1; i <= size; i++) {
-            for (int j = 1; j <= width; j++) {
-                if (j == size - i + 1 || j == size + i - 1) {
-                    // Slanting sides
-                    System.out.print("*");
-                } else if (i == mid && j > size - i + 1 && j < size + i - 1) {
-                    // Horizontal crossbar (short, inside the triangle)
+            for (int j = 1; j <= size; j++) {
+                // Left and right diagonals, and horizontal bar in the middle
+                if (j == 1 && i != 1
+                    || j == size && i != 1
+                    || i == 1 && j != 1 && j != size
+                    || i == size / 2 + 1) {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");
